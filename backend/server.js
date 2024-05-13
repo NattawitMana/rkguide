@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 //Route files
 const guides = require("./routes/guides");
 const auth = require("./routes/auth");
+const games = require("./routes/game")
 
 //Load env vars
 dotenv.config({ path: "./config/config.env" });
@@ -23,6 +24,7 @@ app.use(cookieParser());
 
 //Mount router      
 app.use('/api/rkguide/guides', guides);
+app.use('/api/rkguide/games', games);
 app.use('/api/rkguide/auth', auth);
 
 const PORT = process.env.PORT||5000;

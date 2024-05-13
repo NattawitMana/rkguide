@@ -4,9 +4,11 @@ const Guide = require('../models/Guide');
 //@route    GET /api/rkguide/guides
 //@access   Public
 exports.getGuides= async (req,res,next)=>{
+
     try {
-        const guides = await Guide.find();
-        res.status(200).json({success:true, data:guides});
+        const guides = await Guide.find().sort({ name: 1 });;
+        const total = await Guide.countDocuments();
+        res.status(200).json({success:true,total, data:guides});
     } catch(err) {
         res.status(400).json({success:false});
     }
