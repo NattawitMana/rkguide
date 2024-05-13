@@ -1,0 +1,27 @@
+{
+  "name": "be1",
+  "version": "1.0.0",
+  "description": "for guide project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NattawitMana/rkguide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NattawitMana/rkguide/issues"
+  },
+  "homepage": "https://github.com/NattawitMana/rkguide#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
